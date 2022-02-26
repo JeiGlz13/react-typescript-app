@@ -2,8 +2,9 @@ import { useContext } from "react";
 
 import noImage from '../assets/no-image.jpg';
 import { ProductContext } from "./ProductCard";
+import { ProductImageInterface } from '../interfaces/ProductInterfaces';
 
-export const ProductImage = ({img = ''}):JSX.Element =>{
+export const ProductImage = ({img, className}: ProductImageInterface):JSX.Element =>{
     const {product} = useContext(ProductContext);
 
     let imgToShow: string;
@@ -19,7 +20,7 @@ export const ProductImage = ({img = ''}):JSX.Element =>{
 
     return(
         <div className="lg:relative w-7/12 px-4 py-4 flex">
-            <img src= {imgToShow} alt="Product" className="w-full rounded-3xl" />
+            <img src= {imgToShow} alt="Product" className= {`w-full rounded-3xl ${className}`}  />
         </div>
     )
 }
