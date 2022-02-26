@@ -40,11 +40,11 @@ export const routes: RouteInterface[] = [
         to: '/nolazy',
         path: 'nolazy',
         Component: NoLazy,
-        name: 'no Lazy'
+        name: 'No Lazy'
     },
     {
         to: '/lazylayout',
-        path: '/lazylayout/*',
+        path: 'lazylayout/*',
         Component: LazyLayout,
         name: 'Lazy Layout'
     },
