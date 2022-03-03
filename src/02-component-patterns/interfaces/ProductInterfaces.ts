@@ -36,5 +36,14 @@ export interface ProductHOCInterface {
         ({ children, product }: PropsInterface): JSX.Element;
         Title:   ({ title, desc, classNameDesc, classNameTitle, styleTitle, styleDesc }: TitleInterface) => JSX.Element;
         Image:   ({ img, className, style }: ProductImageInterface) => JSX.Element;
-        Buttons: ({className, style}: ButtonsPropsInterface) => JSX.Element;
+        Buttons: ({className, style, styleButtons, styleDiv}: ButtonsPropsInterface) => JSX.Element;
     }
+
+export interface onChangeArgsInterface {
+    product: ProductInterface,
+    count: number
+}
+
+export interface ProductInCartInterface extends ProductInterface{
+    count: number
+  }
