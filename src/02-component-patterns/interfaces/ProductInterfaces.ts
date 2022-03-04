@@ -29,7 +29,8 @@ export interface ProductImageInterface {
 export interface ProductContextInterface {
     counter: number,
     increaseBy: (value: number)=> void,
-    product: ProductInterface
+    product: ProductInterface,
+    maxCount?: number
 }
 
 export interface ProductHOCInterface {
@@ -46,4 +47,19 @@ export interface onChangeArgsInterface {
 
 export interface ProductInCartInterface extends ProductInterface{
     count: number
+  }
+
+  export interface InitialValuesInterface {
+      count?: number,
+      maxCount?: number,
+  }
+
+  export interface ProductCardHandlersInterface {
+      count: number,
+      isMaxCountReached: boolean,
+      maxCount?: number,
+      product: ProductInterface,
+
+      increaseBy: (value: number) => void,
+      reset: () => void;
   }
