@@ -1,5 +1,5 @@
-import { AboutPage } from '../03-forms/pages/AboutPage';
-import { HomePage } from '../03-forms/pages/HomePage';
+import { FormikBasicPage } from '../03-forms/pages/FormikBasicPage';
+import { RegisterPage } from '../03-forms/pages/RegisterPage';
 import { UserPage } from '../03-forms/pages/UserPage';
 
 type JSXComponent = () => JSX.Element;
@@ -13,16 +13,16 @@ interface RouteInterface {
 
 export const routes: RouteInterface[] = [
     {
-        to: '/home',
-        path: 'home',
-        Component: HomePage,
-        name: 'Home'
+        to: '/register',
+        path: 'register',
+        Component: RegisterPage,
+        name: 'Register Page'
     },
     {
-        to: '/about',
-        path: 'about',
-        Component: AboutPage,
-        name: 'About'
+        to: '/formikbasic',
+        path: 'formikbasic',
+        Component: FormikBasicPage,
+        name: 'Formik Basic'
     },
     {
         to: '/user',
